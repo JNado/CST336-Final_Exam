@@ -299,7 +299,8 @@
                 });
             },
             complete: function(data, status) {
-                // console.log(status);
+                console.log(status);
+                console.log(data);
             }
         });
         
