@@ -61,6 +61,7 @@
         
         <div>
             <button id="showRubric" class="btn btn-dark" href="#rubricModal" data-toggle="modal">Show Rubric</button>
+            <a href="https://cst336-nadolna-finalexam.herokuapp.com/Dashboard/">Show Heroku Application</a>
         </div>
         
         <div class="modal fade" id="timeModal" role="dialog">
@@ -262,7 +263,7 @@
                     </div>
                 </div>
             </div>
-        
+        </div>   
     </body>
     
     <script type="text/javascript">
