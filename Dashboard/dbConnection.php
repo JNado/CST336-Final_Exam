@@ -5,21 +5,14 @@ function getDatabaseConnection() {
     $username = 'root';
     $password = '';
     
-    // if  (strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
-    //     $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-    //     $host = $url["host"];
-    //     $dbname = substr($url["path"], 1);
-    //     $username = $url["user"];
-    //     $password = $url["pass"];
-    // } 
-    
     if  (strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
-        // $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-        $host = "us-cdbr-iron-east-02.cleardb.net";
-        $dbname = "heroku_36740c1a1136d2b";
-        $username = "b6fbae3b49e168";
-        $password = "322a8cdc";
-    }
+        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+        $host = $url["host"];
+        $dbName = substr($url["path"], 1);
+        $username = $url["user"];
+        $password = $url["pass"];
+    } 
+    
     
     $dbConn = new PDO("mysql:host=$host;dbname=$dbName", $username, $password);
     
